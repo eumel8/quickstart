@@ -74,7 +74,7 @@ variable "secgroup_name" {
 
 variable "image_name" {
   description = "Name of the image"
-  default     = "Standard_Ubuntu_16.04_latest"
+  default     = "Standard_Ubuntu_18.04_latest"
 }
 
 variable "flavor_id" {
@@ -94,6 +94,10 @@ variable "prefix" {
 
 variable "rancher_version" {
   default = "latest"
+}
+
+variable "k8sversions" {
+  default = ""
 }
 
 variable "count_agent_all_nodes" {

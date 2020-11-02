@@ -35,7 +35,7 @@ resource "opentelekomcloud_networking_secgroup_rule_v2" "quickstart-secgroup_rul
 }
 
 resource "opentelekomcloud_compute_keypair_v2" "quickstart-key" {
-  name       = "quickstart-key"
+  name       = "quickstart-key-rancher"
   public_key = var.public_key
 }
 
@@ -191,6 +191,7 @@ data "template_file" "userdata_server" {
     cluster_name          = var.cluster_name
     docker_version_server = var.docker_version_server
     rancher_version       = var.rancher_version
+    K8SVERSIONS           = var.k8sversions
   }
 }
 
